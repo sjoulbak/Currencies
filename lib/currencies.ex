@@ -9,7 +9,7 @@ defmodule Currencies do
   alias Currencies.MinorUnit
 
   # Pre-loads currency data at compile time
-  if Code.ensure_compiled(Poison) do
+  if Code.ensure_compiled?(Poison) do
     data_path = fn (path) ->
       Path.join("data", path) |> Path.expand(__DIR__)
     end
